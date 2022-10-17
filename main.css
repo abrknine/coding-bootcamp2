@@ -523,7 +523,7 @@ margin: 80px 0px 0px 0px;
     margin: 0px 1300px 0px 1300px;
   }
   .sec3a img{
-    align-items: center;
+    width: 200px;
   }
 }
 @media only screen and(max-width:412px){
