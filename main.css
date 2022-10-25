@@ -1,49 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Changa:wght@800&family=Fira+Sans:ital@1&family=Hubballi&family=Open+Sans:wght@700&family=Poppins:wght@300&family=Roboto+Mono&family=Rubik&family=Silkscreen&display=swap');
+
+
 *{
     margin: 0px;
     padding: 0px;
   /* font-family: 'Bungee Spice', cursive; */
+  /* font-family: 'Poppins', sans-seri */
 
 }
 body{
-    font-family: 'Changa', sans-serif; 
-}
-.navbar{
-    background-color: rgb(16, 16, 16);
-    height:75px;
-  }
-  .logo{
-    position: absolute;
-    height:8%;
-    width: 15%;
-    top:1%;
-    left:3%;
-  }
-  .navbar li{
-   
-    float:left;
-    left:50%;
-    list-style: none; 
-    margin: 20px 20px;
-    font-size: 20px;
-}
-.navbar ul{
-    float: right;
-    overflow: auto;
+    /* font-family: 'Changa', sans-serif;  */
+    /* font-family: 'Poppins', sans-serif; */
 }
 
-.navbar li a{
-    font-family: "Open Sans",sans-serif;
-    padding: 10px 10px;
-    text-decoration: none;
-    color: white;
-    
+a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
 }
-.navbar li a:hover{
-    color:#F9AF00;
-    font-weight: bold;
-    /* background-color: white; */
-    
-} 
+
+/* nav styles */
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 20px;
+  background-color: black;
+  color: white;
+  height: 64px;
+}
+.nav img{
+  width: 200px;
+  height: 50px;
+}
+
+.logo {
+  font-size: 1.8rem;
+  color: rgb(5, 5, 116);
+  padding-left: 20px;
+}
+.suvid{
+  position: relative;
+  bottom: 12px;
+  left: 40px;
+}
+
+
+.hamburger {
+  padding-right: 20px;
+  cursor: pointer;
+}
+
+.hamburger .line {
+  display: block;
+  width: 40px;
+  height: 5px;
+  margin-bottom: 10px;
+  /* background-color: black; */
+  background-color: white;
+}
+
+.nav__link {
+  position: fixed;
+  width: 100%;
+  top: 5rem;
+  /* left: 200px; */
+  background-color: rgba(0, 0, 0, 0.742);
+  backdrop-filter: blur(20px);
+
+  /* color: white; */
+}
+
+.nav__link a {
+  font-family: "Open Sans",sans-serif;
+  display: block;
+  text-align: center;
+  padding: 10px 0;
+  color: white;
+}
+
+.nav__link a:hover {
+  /* background-color: lightcoral; */
+  color:#ECD439;
+}
+
+.hide {
+  display: none;
+}
+
+@media screen and (min-width: 600px) {
+  .nav__link {
+    display: block;
+    position: static;
+    width: auto;
+    margin-right: 20px;
+    background: none;
+  }
+
+  .nav__link a {
+    display: inline-block;
+    padding: 15px 20px;
+  }
+
+  .hamburger {
+    display: none;
+  }
+}
 /* hero starts */
 .hero{
 display: flex;
@@ -230,7 +295,7 @@ margin: 80px 0px 0px 0px;
  }
  
  .sec3b a{
-     margin: 23px 0px 0px 30px;
+  margin: 23px 0px 0px 0px;
  }
 /* section3 ends */
 
@@ -394,12 +459,12 @@ margin: 80px 0px 0px 0px;
 /* section4 ends */
    /* about us */
    .aboutus{
-    font-family: 'Changa', sans-serif;
+    /* font-family: 'Changa', sans-serif; */
     border: 2px solid grey;
   box-shadow: 2px 2px 2px 2px gray;
   text-align: center;
   width: 1200px;
-  height: 450px;
+  height: 430px;
   margin:  33px auto;
     /* margin: 0px 120px 23px 120px ; */
     padding: 23px 0px 23px 0px;
@@ -416,9 +481,7 @@ margin: 80px 0px 0px 0px;
     justify-content: space-evenly;
     padding:  12px 0px 0px 0px;
    }
-   .abou1 h2{
-    /* margin: 0px 1000px 0px 0px; */
-   }
+   
    .whotext{
     line-height: 20px;
     text-align: center;
@@ -426,15 +489,11 @@ margin: 80px 0px 0px 0px;
    }
    .outtext1{
     line-height: 21px;
-    align-items: center;
+    text-align: center;
+    font-weight: 600;
    }
-   .ourtext2{
-    line-height: 21px;
-    align-items: center;
-   }
-   .abou1 h2{
-      margin: 0px 0px 0px 0px;
-   }
+   
+   
    .abou2 img{
     width: 350px;
     height: 350px;
@@ -466,6 +525,7 @@ margin: 80px 0px 0px 0px;
       text-align: center;
    }
 .fee img{
+  border-radius: 230px;
     width: 230px;
     height: 180px;
 } 
@@ -480,7 +540,11 @@ margin: 80px 0px 0px 0px;
     background-color: black;
    }
    
+   .foot h3{
+    color: white;
+   }
    .feet{
+    /* width: 200px; */
     padding:  90px 200px 70px 200px;
     display: flex;
     gap: 70px;
@@ -503,7 +567,7 @@ margin: 80px 0px 0px 0px;
     height: 40px;
     width: 40px;
     border-radius: 200px;
-    background-color: #888;
+    /* background-color: #888; */
 }
 .am img:hover{
     box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
@@ -517,20 +581,264 @@ margin: 80px 0px 0px 0px;
     width: 200px ;
 }
 
-@media  only screen and (min-width:1525px) and(max-width:3324px) {
+@media  only screen and (max-width:360px) {
   .product-category{
-    /* align-items: center; */
-    margin: 0px 1300px 0px 1300px;
+    font-size: 23px;
+  }
+
+  .logo{
+    width: 100px;
+    height: 50px;
+    margin: 6px 0px 0px 0px;
+  }
+  .page-content{
+    flex-direction: column;
+     gap: 16px;
+  } 
+  .heroa{
+    letter-spacing: 0.1px;
+    /* line-height: 33px; */
+    font-size: 13px;
+  }
+  .navbar li a{
+    display: none;
+  }
+  .nav1{
+    display: none;
+  }
+  .hero{
+    flex-direction: column-reverse;
+    gap: 22px;
+    margin: 30px 0px 0px 0px;
+    padding: 20px 30px;
+  }
+  .bu{
+    font-size: 11px;
+    margin: 0px 23px ;
+  }
+  .hero2 img{
+      width: 200px;
+    height: 200px;
+    margin: 0px 42px 0px 42px;
+    }
+  .heading h1{
+    font-size: 23px;
+    padding: 10px;
+  }
+  .aboutus{
+    width: 250px;
+    height: 600px;
+  }
+  .abou1{
+    flex-direction: column;
+    display: block;
+  }
+    .abou{
+      flex-direction: column-reverse;
+      
+    }
+    .abou2 img{
+      width: 150px;
+      height: 150px;
+    }
+    .abo h1{
+      font-size: 33px;
+
+    }
+  .sec3{
+    width: 270px;
+    height: 250px;
+    padding: 23px 0px 0px 0px;
   }
   .sec3a img{
+    width: 150px;
+    height: 100px;
+  }
+  .sec3b h1{
+    font-size: 16px;
+  }
+  .sec3b button{
+        margin: none;
+        padding: 13px 30px 13px 30px;
+        /* margin: 1px; */
+  }
+  .sec3b a{
+    /* margin: 1px; */
+  }
+  .feet{
+    padding: 25px 93px ;
+    /* display: block; */
+    flex-direction: column;
+  }
+  .abou1{
+    align-items: none;
+  }
+  .abou1 h2{
+    font-size: 19px;
+  }
+  .whotext{
+    line-height: 12px;
+    font-size: 12px;
+    align-items: none;
+    text-align: none;
+  }
+  .card{
+    position: relative;
+    left: 30px;
+  }
+  .feed1 h2{
+   font-size: 23px;
+  }
+  .feed2{
+     flex-direction: column;
+     gap: 32px;
+     /* margin: 12px px; */
+  }
+
+ 
+  .feed2a{
     width: 200px;
+    position: relative;
+    left: 50px;
   }
+  .ourtext1{
+    line-height: 12px;
+    font-size: 12px;
+  }
+  .ourtext2{
+    line-height: 12px;
+    font-size: 12px;
+  }
+  
 }
-@media only screen and(max-width:412px){
-  .navbar{
-    width: 100%;
+
+@media  only screen and (max-width:412px){
+  .product-category{
+    font-size: 23px;
   }
+
+  .logo{
+    width: 100px;
+    height: 50px;
+    margin: 6px 0px 0px 0px;
+  }
+  .page-content{
+    flex-direction: column;
+     gap: 16px;
+  } 
+  .heroa{
+    letter-spacing: 0.1px;
+    /* line-height: 33px; */
+    font-size: 13px;
+  }
+  .navbar li a{
+    display: none;
+  }
+  .nav1{
+    display: none;
+  }
+  .hero{
+    flex-direction: column-reverse;
+    gap: 22px;
+    margin: 30px 0px 0px 0px;
+    padding: 20px 30px;
+  }
+  .bu{
+    font-size: 11px;
+    margin: 0px 23px ;
+  }
+  .hero2 img{
+      width: 200px;
+    height: 200px;
+    margin: 0px 42px 0px 42px;
+    }
+  .heading h1{
+    font-size: 23px;
+    padding: 10px;
+  }
+  .aboutus{
+    width: 250px;
+    height: 600px;
+  }
+  .abou1{
+    flex-direction: column;
+    display: block;
+  }
+    .abou{
+      flex-direction: column-reverse;
+      
+    }
+    .abou2 img{
+      width: 150px;
+      height: 150px;
+    }
+    .abo h1{
+      font-size: 33px;
+
+    }
   .sec3{
-    width: 50px;
+    width: 270px;
+    height: 250px;
+    padding: 23px 0px 0px 0px;
   }
+  .sec3a img{
+    width: 150px;
+    height: 100px;
+  }
+  .sec3b h1{
+    font-size: 16px;
+  }
+  .sec3b button{
+        margin: none;
+        padding: 13px 30px 13px 30px;
+        /* margin: 1px; */
+  }
+  .sec3b a{
+    /* margin: 1px; */
+  }
+  .feet{
+    padding: 25px 93px ;
+    /* display: block; */
+    flex-direction: column;
+  }
+  .abou1{
+    align-items: none;
+  }
+  .abou1 h2{
+    font-size: 19px;
+  }
+  .whotext{
+    line-height: 12px;
+    font-size: 12px;
+    align-items: none;
+    text-align: none;
+  }
+  .card{
+    position: relative;
+    left: 30px;
+  }
+  .feed1 h2{
+   font-size: 23px;
+  }
+  .feed2{
+     flex-direction: column;
+     gap: 32px;
+     /* margin: 12px px; */
+  }
+
+ 
+  .feed2a{
+    width: 200px;
+    position: relative;
+    left: 50px;
+  }
+  .ourtext1{
+    line-height: 12px;
+    font-size: 12px;
+  }
+  .ourtext2{
+    line-height: 12px;
+    font-size: 12px;
+  }
+  
 }

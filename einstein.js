@@ -9,18 +9,18 @@ const stepcounter2 = document.querySelector("#step2");
 const stepcounter3 = document.querySelector("#step3");
 const stepcounter4 = document.querySelector("#step4");
 const stepcounter5 = document.querySelector("#step5");
-
 let count = "a";
 let get = false;
 box1.addEventListener("click", () => {
   stepcounter1.style.background = "#F9AF00";
-  // window.location.replace("https://www.amazon.in/")
+  
   if (count != "a") {
     alert("attempt level 1 first");
   }
   count = "b";
-  localStorage.setItem("b", true);
-  localStorage.clear()
+  // localStorage.setItem("b", true);
+  window.open("https://scratch.mit.edu/projects/13701368/")
+  // localStorage.clear()
 });
 
 box2.addEventListener("click", () => {
@@ -29,8 +29,9 @@ box2.addEventListener("click", () => {
   } else {
     stepcounter2.style.background = "#F9AF00";
     count = "c";
-    localStorage.setItem("c", true);
-     localStorage.clear()
+    // localStorage.setItem("c", true);
+    window.open("https://scratch.mit.edu/projects/13701368/")
+      // localStorage.clear()
   }
 });
 
@@ -40,8 +41,10 @@ box3.addEventListener("click", () => {
   } else {
     stepcounter3.style.background = "#F9AF00";
     count = "d";
-    localStorage.setItem("d", true);
-    localStorage.clear()
+    // localStorage.setItem("d", true);
+    window.open("https://scratch.mit.edu/projects/13701368/")
+
+      // localStorage.clear()
   }
 });
 box4.addEventListener("click", () => {
@@ -50,8 +53,10 @@ box4.addEventListener("click", () => {
   } else {
     stepcounter4.style.background = "#F9AF00";
     count = "e";
-    localStorage.setItem("e", true);
-    localStorage.clear();
+    // localStorage.setItem("e", true);
+    window.open("https://scratch.mit.edu/projects/13701368/")
+
+    //  localStorage.clear();
   }
 });
 box5.addEventListener("click", () => {
@@ -60,9 +65,10 @@ box5.addEventListener("click", () => {
   } else {
     stepcounter5.style.background = "#F9AF00";
     count = "f";
-    localStorage.setItem("f", true);
+    // localStorage.setItem("f", true);
+    window.open("https://scratch.mit.edu/projects/13701368/")
     get = true;
-    localStorage.clear()
+    //  localStorage.clear()
    alert("Successfully Completed all the courses.Download Your Certificate");
   window.document.querySelector('.cert').disabled=false;
   window.document.querySelector('.cert').style.cursor='pointer';
@@ -70,35 +76,46 @@ box5.addEventListener("click", () => {
   }
 });
 
-const b = localStorage.getItem("b");
+// const b = localStorage.getItem("b");
 
-if (b) {
-  stepcounter1.style.background = "green";
-}
+// if (b) {
+//   stepcounter1.style.background = "green";
+// }
 
-const c = localStorage.getItem("c");
+// const c = localStorage.getItem("c");
 
-if (c) {
-  stepcounter2.style.background = "green";
-}
+// if (c) {
+//   stepcounter2.style.background = "green";
+// }
 
-const d = localStorage.getItem("d");
+// const d = localStorage.getItem("d");
 
-if (d) {
-  stepcounter3.style.background = "green";
-}
+// if (d) {
+//   stepcounter3.style.background = "green";
+// }
 
-const e = localStorage.getItem("e");
+// const e = localStorage.getItem("e");
 
-if (e) {
-  stepcounter4.style.background = "green";
-}
+// if (e) {
+//   stepcounter4.style.background = "green";
+// }
 
-const f = localStorage.getItem("f");
+// const f = localStorage.getItem("f");
 
-if (f) {
-  stepcounter5.style.background = "green";
+// if (f) {
+//   stepcounter5.style.background = "green";
  
-}
+// }
+
 
 // console.log("the values of", a)//
+
+function copyUrl(text) {
+  var inputc = document.body.appendChild(document.createElement("input"));
+  var copyText = document.getElementById("myInput");
+  copyText .select();
+  document.execCommand('copy');
+  inputc.parentNode.removeChild(inputc);
+  let v=document.querySelector('.popup').style.display="block";
+  }
+  
